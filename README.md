@@ -10,7 +10,6 @@
 
 ## Synopsis
 - Course: Real-Time Web
-- Minor: [Web Design and Development](https://dlo.mijnhva.nl/d2l/le/content/275640/Home) (*login required)
 - Course Coordinator: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
 - Minor Coordinator(s): Joost Faber ([@joostf](https://github.com/joostf)) Koop Reynders ([@KoopReynders](https://github.com/KoopReynders))
 - Lecturers: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5)) & Shyanta Vleugel ([@shyanta](https://github.com/shyanta))
