@@ -1,4 +1,4 @@
-# Real-Time Web @cmda-minor-web · 2020/21
+# Real-Time Web @cmda-minor-web · 2021/22
 
 ## Table of Contents
 - [Synopsis](#synopsis)
@@ -12,8 +12,8 @@
 - Course: Real-Time Web
 - Course Coordinator: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
 - Minor Coordinator(s): Joost Faber ([@joostf](https://github.com/joostf)) Koop Reynders ([@KoopReynders](https://github.com/KoopReynders))
-- Lecturers: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5)) & Shyanta Vleugel ([@shyanta](https://github.com/shyanta))
-- Student Assistants: [...]
+- Lecturers: Shyanta Vleugel ([@shyanta](https://github.com/shyanta)) & Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
+- Student Assistants: Daan Korver ([@daankorver](https://github.com/DaanKorver)) & Justin Lung ([@justinlung](https://github.com/JustinLung))
 - Credit: 3 ECTS credits
 - Academic year: 2021-2022
 - Programme: Communication and Multimedia Design (full time bachelor)
@@ -24,13 +24,13 @@ During this course you will learn how to build a real-time application. You will
 
 ## Communication
 - [Github](https://github.com/cmda-minor-web/real-time-web-2122)
-- [Microsoft Teams]()
-- [Brightspace]()
+- [Microsoft Teams](https://teams.microsoft.com/l/channel/19%3a2b5ac900b14c4b68a31dc5dbb380dcbe%40thread.tacv2/06%2520-%2520Real%2520Time%2520web)
+- [Brightspace](https://dlo.mijnhva.nl/d2l/home/324147)
 
 If you have questions:
 - [Look at the additional resources]()
 - [Use a search engine like startpage](https://www.startpage.com/)
-- [Ask questions on MS Teams]() (please help each other!)
+- [Ask questions on MS Teams](https://teams.microsoft.com/l/channel/19%3a2b5ac900b14c4b68a31dc5dbb380dcbe%40thread.tacv2/06%2520-%2520Real%2520Time%2520web) (please help each other!)
 - [Contact a student-assisstant](#synopsis)
 - [Contact a lecturer](#synopsis)
 
@@ -54,7 +54,7 @@ Your efforts will be graded using a single point rubric (see below). You will ha
 
 ## Programme
 
-### Daily schedule
+### Daily Schedule
 To keep things simple we use a daily schedule that will be used during normal course days. We make exceptions for checkups and assessments, on these days a different schedule will be given.
 
 | Time | Who | Activity |
