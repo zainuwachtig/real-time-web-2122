@@ -55,26 +55,25 @@ Your efforts will be graded using a single point rubric (see below). You will ha
 ## Programme
 
 ### Daily Schedule
-To keep things simple we use a daily schedule that will be used during normal course days. We make exceptions for checkups and assessments, on these days a different schedule will be given.
+To keep things simple we use a daily schedule that will be used during normal course days (monday/tuesday). We make exceptions for fridays, on these days a different schedule will be given.
 
 | Time | Who | Activity |
 |:--|:--|:--|
-| *~09:00* | *(Shyanta, Justus, [...])* | *Standup* |
-| 09:30 | Tribe *+(Shyanta, Justus, [...])* | Talk with crucial information (make sure you attend!) |
-| 11:00 | Teams in MS Teams: *(ex. R2D2 Team A)* | Work on the (day)assignment |
-|  | Squad R2D2 Team B *+(Justus, [...])* | Standup |
-|  | Squad SQUID Team B *+(Shyanta, [...])* | Standup |
-| 11:30 | Squad R2D2 Team C *+(Justus, [...])* | Standup |
-|  | Squad SQUID Team C *+(Shyanta, [...])* | Standup |
-| 12:00 | Squad R2D2 Team A *+(Justus, [...])* | Standup |
-|  | Squad SQUID Team A *+(Shyanta, [...])* | Standup |
-| 13:00 | Tribe *+([...], [...])* | Continue work on the (day)assignment |
-| 16:00 | Squad R2D2 Team B *+([...])* | Standup |
-|  | Squad SQUID Team B *+([...])* | Standup |
-| 16:15 | Squad R2D2 Team C *+([...])* | Standup |
-|  | Squad SQUID Team C *+([...])* | Standup |
-| 16:30 | Squad R2D2 Team A *+([...])* | Standup |
-|  | Squad SQUID Team A *+([...])* | Standup |
+| *~09:00* | *(Shyanta, Justus)* | *Standup* |
+| 09:30 | Tribe *+(Shyanta, Justus)* | Talk with crucial information (make sure you attend!) |
+| 11:00 | Tribe | Work on the (day)assignment |
+|  | Team 1 *+(Shyanta)* | Standup |
+|  | Team 2 *+(Justus)* | Standup |
+| 11:20 | Team 3 *+(Shyanta)* | Standup |
+|  | Team 4 *+(Justus)* | Standup |
+| 11.40 | Team 5 *+(Shyanta)* | Standup |
+|  | Team 6 *+(Justus)* | Standup |
+| 12.00 | Team 7 *+(Shyanta)* | Standup |
+|  | Team 8 *+(Justus)* | Standup |
+| 12.20 | Team 9 *+(Shyanta)* | Standup |
+|  | Team 20 *+(Justus)* | Standup |
+| 13:00 | Tribe *+(Daan, Justin)* | Continue work on the (day)assignment |
+| 16:00ish | Tribe | Wrapup |
 
 ### Week 1 - Getting a grip
 Goal: Build and deploy a simple but unique real-time app
@@ -86,6 +85,12 @@ Goal: Build and deploy a simple but unique real-time app
 #### Tuesday [date]
 **Talk subjects:** My first realtime web app! [(slides)](https://docs.google.com/presentation/d/18eftO3epzIXDjdwl3cn5Wq99fkQYCUnExUqq9P72A3k/edit?usp=sharing) Short recap, (local) data management, using (wire) flows for realtime web apps, (live coded) multi-user woordzoeker.\
 **Day assignment:** [(assignment)](./course/week-1.md#assignment-2-make-it-so) Make it so *(individually)*. i) Create (code/style/discuss/deploy) a chat app (or other realtime functionality) based on the examples and ii) add your own unique feature!
+
+#### Friday
+
+| Time | Who | Activity |
+|:--|:--|:--|
+| | Tribe *+(Shyanta, Justus)* | Peer review |
 
 ### Week 2 - Sockets and data
 Goal: Store, manipulate and share data between server-client   
@@ -103,19 +108,7 @@ Instead of our talk we will have a [peer review session](./course/peer-review.md
 
 | Time | Who | Activity |
 |:--|:--|:--|
-| 09:30 | Tribe *+(Shyanta, Justus, [...])* | Peer review |
-| 10:30 | Squad R2D2 Team B.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team B.2 *+([...])* | Checkup |
-|  | Squad SQUID Team B.1 *+(Shyanta)* | Checkup |
-|  | Squad SQUID Team B.2 *+([...])* | Checkup |
-| 11:00 | Squad R2D2 Team C.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team C.2 *+([...])* | Checkup |
-|  | Squad SQUID Team C.1 *+(Shyanta)* | Checkup |
-|  | Squad SQUID Team C.2 *+([...])* | Checkup |
-| 11:30 | Squad R2D2 Team A.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team A.2 *+([...])* | Checkup |
-|  | Squad SQUID Team A.1 *+(Shyanta)* | Checkup |
-|  | Squad SQUID Team A.2 *+([...])* | Checkup |
+| | Tribe *+(Shyanta, Justus)* | Peer review |
 
 ### Week 3 - Dealing with multiple users
 Goal: Handle data sharing and multi-user support 
@@ -133,31 +126,9 @@ We will have our final [peer review session](./course/peer-review.md). You will 
 
 | Time | Who | Activity |
 |:--|:--|:--|
-| 09:30 | Tribe *+(Shyanta, Justus, [...])* | Peer review |
-| 10:30 | Squad R2D2 Team B.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team B.2 *+([...])* | Checkup |
-|  | Squad SQUID Team B.1 *+(Shyanta)* | Checkup |
-|  | Squad SQUID Team B.2 *+([...])* | Checkup |
-| 11:00 | Squad R2D2 Team C.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team C.2 *+([...])* | Checkup |
-|  | Squad SQUID Team C.1 *+(Shyanta)* | Checkup |
-|  | Squad SQUID Team C.2 *+([...])* | Checkup |
-| 11:30 | Squad R2D2 Team A.1 *+(Justus)* | Checkup |
-|  | Squad R2D2 Team A.2 *+([...])* | Checkup |
-|  | Squad SQUID Team A.1 *+(Shyanta)* | Checkup |
-|  | Squad SQUID Team A.2 *+([...])* | Checkup |
-
-### Week 4
-Goal: Assess and wrap-up the course!
-
-#### Wednesday [date]
-**09.30** [*Shyanta, Justus*] Assessments (scheduled) SQUID A.1/B.1/C.1 and R2D2 A.1/B.1/C.1
-
-#### Thursday [date]
-**09.30** [*Shyanta, Justus*] Assessments (scheduled) SQUID A.2/B.2/C.2 and R2D2 A.2/B.2/C.2
-
-#### Friday [date]
-**15.00** [*Everyone*] Wrap-up for the course. (drinks?!)
+| | Tribe *+(Shyanta, Justus)* | Peer review |
+| | Tribe *+(Shyanta, Justus)* | Finalize your assignment |
+| 16.00 | Tribe *+(Shyanta, Justus)* | (drinks?!) |
 
 
 
