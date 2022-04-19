@@ -13,7 +13,7 @@
 - Course Coordinator: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
 - Minor Coordinator(s): Joost Faber ([@joostf](https://github.com/joostf)) Koop Reynders ([@KoopReynders](https://github.com/KoopReynders))
 - Lecturers: Shyanta Vleugel ([@shyanta](https://github.com/shyanta)) & Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
-- Student Assistants: Daan Korver ([@daankorver](https://github.com/DaanKorver)) & Justin Lung ([@justinlung](https://github.com/JustinLung))
+- Student Assistants: Daan Korver ([@daankorver](https://github.com/DaanKorver))
 - Credit: 3 ECTS credits
 - Academic year: 2021-2022
 - Programme: Communication and Multimedia Design (full time bachelor)
@@ -78,32 +78,26 @@ To keep things simple we use a daily schedule that will be used during normal co
 ### Week 1 - Getting a grip
 Goal: Build and deploy a simple but unique real-time app
 
-#### Monday [date]
+#### Tuesday 19 April 
 **Talk subjects:** Hit the ground running... [(slides)](https://docs.google.com/presentation/d/1Z-zOIDvFB0P2qGHV0F74n9T4kprgybJ_8GYU-1MaKfM/edit?usp=sharing) Course objective and explanation of the assignment, examples from last year, explanation of real-time, (live coded) bare bone chat app and deployment on Heroku.\
 **Day assignment:** [(assignment)](./course/week-1.md#assignment-1-make-it-so) Make it so *(as a team)*: Implement (code/style/discuss/deploy) basic chat (or other realtime) functionality on your teampage!
 
-#### Tuesday [date]
+#### Friday 22 April
 **Talk subjects:** My first realtime web app! [(slides)](https://docs.google.com/presentation/d/18eftO3epzIXDjdwl3cn5Wq99fkQYCUnExUqq9P72A3k/edit?usp=sharing) Short recap, (local) data management, using (wire) flows for realtime web apps, (live coded) multi-user woordzoeker.\
 **Day assignment:** [(assignment)](./course/week-1.md#assignment-2-make-it-so) Make it so *(individually)*. i) Create (code/style/discuss/deploy) a chat app (or other realtime functionality) based on the examples and ii) add your own unique feature!
-
-#### Friday
-
-| Time | Who | Activity |
-|:--|:--|:--|
-| | Tribe *+(Shyanta, Justus)* | Peer review |
 
 ### Week 2 - Sockets and data
 Goal: Store, manipulate and share data between server-client   
 
-#### Monday [date]
+#### Monday 25 April
 **Talk subjects:** Data driven development?! [(slides)](https://docs.google.com/presentation/d/1WC1DxkQm2eUCTQp7dEfv0cTVMK7zlg3der0P0qP7S5I/edit?usp=sharing) Feedback about last week, final assignment and conditions (rubric), explanation of data management, (live coded) Long polling vs Websockets. \
 **Day assignment:** [(assignment)](./course/week-2.md#assignment-1-proof-of-concept) (Proof of) Concept *(individually)*. i) Create a (3 > 1) concept based on existing data from an API and ii) map this data using modelling techniques.
 
-#### Tuesday [date]
+#### Tuesday 26 April
 **Talk subjects:** Above all else, show the data. [(slides)](https://docs.google.com/presentation/d/1tW4klrDjt1AfWte311uKkfQYwaHwokzQ-ue3a4VphqA/edit?usp=sharing) Securing real-time web apps, offline support, the publication/subscription model and (case study) Quek!\
 **Day assignment:** [(assignment)](./course/week-2.md#assignment-2-proof-of-concept) Proof of concept *(individually)*: i) Create (code/style/discuss/deploy) part of the core functionality for your concept and ii) show the  corresponding data lifecycle diagram.
 
-#### Friday [date]
+#### Friday 29 April
 Instead of our talk we will have a [peer review session](./course/peer-review.md). You will read, comment and fire issues on each others code. Doing this is really good for your programming insight and helps others refining/refactoring their code.
 
 | Time | Who | Activity |
@@ -113,15 +107,15 @@ Instead of our talk we will have a [peer review session](./course/peer-review.md
 ### Week 3 - Dealing with multiple users
 Goal: Handle data sharing and multi-user support 
 
-#### Monday [date]
+#### Monday 9 May
 **Talk subjects:** Roll your own... [(slides) ](https://docs.google.com/presentation/d/1Cx9qCo8QQXH5Btbtwg0L61so-wn2OxFQZdphIhbumQk/edit?usp=sharing) Data management, the functional programming trinity (map, filter and reduce). OAuth?!
 **Day assignment:** [(assignment)](./course/week-3.md#assignment-1-data-management)
 
-#### Tuesday [date]
+#### Tuesday 10 May
 **Talk subjects:** Not ignoring the UI-Stack! [(slides)](https://docs.google.com/presentation/d/1ACuUJ-B19hgFN2CCTYH8ClN0WD69ok8ZVnkRGbU0FjA/edit?usp=sharing). Usability, feedback, feedforward etc. in real-time web apps, (case study) postNL loader and FAQ.
 **Day assignment:** [(assignment)](./course/week-3.md#assignment-2-user-testing)
 
-#### Friday [date]
+#### Friday 13 May
 We will have our final [peer review session](./course/peer-review.md). You will read, comment and fire issues on each others code. Doing this helps others dotting the i’s on their project.
 
 | Time | Who | Activity |
@@ -129,7 +123,6 @@ We will have our final [peer review session](./course/peer-review.md). You will 
 | | Tribe *+(Shyanta, Justus)* | Peer review |
 | | Tribe *+(Shyanta, Justus)* | Finalize your assignment |
 | 16.00 | Tribe *+(Shyanta, Justus)* | (drinks?!) |
-
 
 
 <!-- Here are some hints for your project! -->
