@@ -1,4 +1,4 @@
-# Real-Time Web @cmda-minor-web · 2021/22
+# Real-Time Web @cmda-minor-web 2122
 
 ## Table of Contents
 - [Synopsis](#synopsis)
