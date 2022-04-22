@@ -12,10 +12,14 @@ form.addEventListener('submit', function(e) {
     }
 });
 
-socket.on('chat message', function(msg) {
+socket.on('chat message', function(e) {
     const item = document.createElement('li');
-    item.textContent = msg;
-    item.classList.add('outgoing')
+    item.textContent = e.msg;
+    if(socket.id !== e.senderID) {
+        item.classList.add('incoming')
+    } else {
+        item.classList.add('outgoing')
+    }
     messages.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
 });

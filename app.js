@@ -4,7 +4,8 @@ const http = require('http')
 const server = http.createServer(app)
 const io = require('socket.io')(server)
 const port = process.env.PORT || 3000
-const uuid = require("uuid");
+const uuid = require("uuid")
+let senderID = ''
 
 app.use(express.static('public'))
 
@@ -16,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log(`${socket.id} connected`);
     socket.on('disconnect', () => {
       console.log('a user disconnected');
     });
@@ -26,14 +27,11 @@ io.on('connection', (socket) => {
     });
 
     socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
+        senderID = socket.id
+        io.emit('chat message', {msg, senderID});
+        {console.log(`${socket.id} is the sender`)}
     });
-    console.log(socket.id)
 });
-
-io.engine.generateId = (req) => {
-    return uuid.v4(); // must be unique across all Socket.IO servers
-}
 
 server.listen(port, () => {
     console.log("App is running on port " + port);
