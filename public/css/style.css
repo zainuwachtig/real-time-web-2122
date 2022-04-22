@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+
+:root {
+	--color-incoming: #fc6b66;
+	--color-outgoing: #f6c053;
+}
+
+* {
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.chatbox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	height: 80vh;
+}
+
+.chatbox ul {
+	padding: 0;
+	margin: 0;
+}
+
+.chatbox .outgoing, .chatbox .incoming {
+	padding: 1em;
+	/* border: 1px solid var(--blue); */
+	border-radius: 1em;
+	margin-bottom: 2.5em;
+	position: relative;
+	list-style-type: none;
+	line-break: anywhere;
+	max-width: 10em;
+}
+
+.chatbox .incoming {
+	background-color: var(--color-incoming);
+}
+
+.chatbox .incoming::after {
+	height: 0;
+	width: 0;
+	content: "";
+	border-left: 24px solid var(--color-incoming);
+	border-right: 12px solid transparent;
+	border-top: 12px solid var(--color-incoming);
+	border-bottom: 20px solid transparent;
+	position: absolute;
+	bottom: -1em;
+	left: 1em;
+}
+
+.chatbox .outgoing {
+	background-color: var(--color-outgoing);
+}
+
+.chatbox .outgoing::after {
+	height: 0;
+	width: 0;
+	content: "";
+	border-left: 12px solid transparent;
+	border-right: 24px solid var(--color-outgoing);
+	border-top: 12px solid var(--color-outgoing);
+	border-bottom: 20px solid transparent;
+	position: absolute;
+	bottom: -1em;
+	right: 1em;
+}
+
+.chatbox input[type="text"] {
+	padding: 0.3em;
+	border-radius: 0.3em;
+	border: 1px solid #f05;
+}
+
+.chatbox input[type="text"]:focus, .chatbox button:focus {
+	outline: 1px solid black;
+	outline-offset: 3px;
+}
+
+.chatbox button {
+	width: 2em;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	background-color: lightgreen;
+	border: none;
+	margin-left: 0.5em;
+}
+
+.chatbox button svg {
+	width: 1em;
+	aspect-ratio: 1/1;
+	align-self: center;
+	text-align: center;
+	fill: white;
+}
