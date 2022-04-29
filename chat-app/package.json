@@ -1,0 +1,33 @@
+{
+  "name": "real-time-web-2122",
+  "version": "1.0.0",
+  "description": "## Table of Contents - [Synopsis](#synopsis) - [Description](#description) - [Communication](#communication) - [Goals](#goals) - [Grading](#grading) - [Programme](#programme)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zainuwachtig/real-time-web-2122.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zainuwachtig/real-time-web-2122/issues"
+  },
+  "homepage": "https://github.com/zainuwachtig/real-time-web-2122#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1",
+    "uuid": "^8.3.2"
+  }
+}

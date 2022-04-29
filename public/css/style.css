@@ -1,96 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-	--color-incoming: #fc6b66;
-	--color-outgoing: #f6c053;
+    --background-color: #EAE1DE;
+    --color: #EC2D0B;
 }
 
 * {
-	font-family: 'IBM Plex Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.chatbox {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	height: 80vh;
+body {
+    background-color: var(--background-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.chatbox ul {
-	padding: 0;
-	margin: 0;
+h1 {
+    width: fit-content;
+    margin: 2rem auto;
+    font-size: 4rem;
 }
 
-.chatbox .outgoing, .chatbox .incoming {
-	padding: 1em;
-	/* border: 1px solid var(--blue); */
-	border-radius: 1em;
-	margin-bottom: 2.5em;
-	position: relative;
-	list-style-type: none;
-	line-break: anywhere;
-	max-width: 10em;
+table {
+    margin: 0 auto;
+    border-spacing: 1rem;
 }
 
-.chatbox .incoming {
-	background-color: var(--color-incoming);
+th {
+    padding: 1rem;
+    font-size: 3rem;
+    background-color: var(--color);
+    cursor: pointer;
+    width: 8rem;
+    height: 8rem;
 }
 
-.chatbox .incoming::after {
-	height: 0;
-	width: 0;
-	content: "";
-	border-left: 24px solid var(--color-incoming);
-	border-right: 12px solid transparent;
-	border-top: 12px solid var(--color-incoming);
-	border-bottom: 20px solid transparent;
-	position: absolute;
-	bottom: -1em;
-	left: 1em;
+tr:nth-of-type(1) th:first-of-type {
+    border-radius: 1rem 0 0 0;
 }
 
-.chatbox .outgoing {
-	background-color: var(--color-outgoing);
+tr:nth-of-type(1) th:last-of-type {
+    border-radius: 0 1rem 0 0;
 }
 
-.chatbox .outgoing::after {
-	height: 0;
-	width: 0;
-	content: "";
-	border-left: 12px solid transparent;
-	border-right: 24px solid var(--color-outgoing);
-	border-top: 12px solid var(--color-outgoing);
-	border-bottom: 20px solid transparent;
-	position: absolute;
-	bottom: -1em;
-	right: 1em;
+tr:nth-of-type(3) th:first-of-type {
+    border-radius: 0 0 0 1rem;
 }
 
-.chatbox input[type="text"] {
-	padding: 0.3em;
-	border-radius: 0.3em;
-	border: 1px solid #f05;
-}
-
-.chatbox input[type="text"]:focus, .chatbox button:focus {
-	outline: 1px solid black;
-	outline-offset: 3px;
-}
-
-.chatbox button {
-	width: 2em;
-	aspect-ratio: 1/1;
-	border-radius: 50%;
-	background-color: lightgreen;
-	border: none;
-	margin-left: 0.5em;
-}
-
-.chatbox button svg {
-	width: 1em;
-	aspect-ratio: 1/1;
-	align-self: center;
-	text-align: center;
-	fill: white;
+tr:nth-of-type(3) th:last-of-type {
+    border-radius: 0 0 1rem 0;
 }

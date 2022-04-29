@@ -1,38 +1,29 @@
-const express = require('express')
-const app = express()
-const http = require('http')
-const server = http.createServer(app)
-const io = require('socket.io')(server)
-const port = process.env.PORT || 3000
-const uuid = require("uuid")
-let senderID = ''
+const express = require('express');
+const compression = require('compression');
 
-app.use(express.static('public'))
+const hostname = '127.0.0.1';
+const port = process.env.PORT || 5500;
+
+const app = express();
+
+app.use(compression());
+
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=365000000, immutable');
+  next();
+});
 
 app.set('view engine', 'ejs');
 const ejs = require('ejs');
 
-app.get("/", (req, res) => {
-	res.render('index')
+app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get('/', (req, res) => {
+  res.render('index');
 });
 
-io.on('connection', (socket) => {
-    console.log(`${socket.id} connected`);
-    socket.on('disconnect', () => {
-      console.log('a user disconnected');
-    });
-
-    socket.on('chat message', (msg) => {
-        console.log('message: ' + msg);
-    });
-
-    socket.on('chat message', (msg) => {
-        senderID = socket.id
-        io.emit('chat message', {msg, senderID});
-        {console.log(`${socket.id} is the sender`)}
-    });
-});
-
-server.listen(port, () => {
+app.listen(port, () => {
     console.log("App is running on port " + port);
 });
