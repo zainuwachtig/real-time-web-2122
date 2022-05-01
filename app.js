@@ -24,6 +24,20 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/test', async (req, res) => {
+  let response = await fetch('https://api.emojisworld.fr/v1/random?&limit=2');
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data);
+
+    res.render('test', {
+      player1: data.results[0].emoji,
+      player2: data.results[1].emoji
+    });
+  }
+});
+
 app.listen(port, () => {
     console.log("App is running on port " + port);
 });
+
