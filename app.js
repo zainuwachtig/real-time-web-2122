@@ -30,7 +30,7 @@ app.get('/test', async (req, res) => {
     const data = await response.json();
     console.log(data);
 
-    res.render('test', {
+    res.render('index', {
       player1: data.results[0].emoji,
       player2: data.results[1].emoji
     });

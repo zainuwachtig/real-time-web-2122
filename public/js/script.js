@@ -23,9 +23,9 @@ let p1Turn
 function placeMark(cell, currentTurn) {
     cell.classList.add(currentTurn)
     if (cell.classList.contains('p1')) {
-        cell.textContent = 'aap'
+        cell.textContent = document.getElementById('player-1').innerText
     } else {
-        cell.textContent = 'kaas'
+        cell.textContent = document.getElementById('player-2').innerText
     }
 }
 
