@@ -1,10 +1,12 @@
 const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
+const io = require('socket.io')(server);
 const compression = require('compression');
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT || 5500;
-
-const app = express();
 
 app.use(compression());
 
@@ -37,7 +39,14 @@ app.get('/test', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+io.on('connection', (socket) => {
+  console.log(`${socket.id} connected`);
+    socket.on('disconnect', () => {
+      console.log(`${socket.id} disconnected`);
+    });
+});
+
+server.listen(port, () => {
     console.log("App is running on port " + port);
 });
 

@@ -49,6 +49,10 @@ function handleClick(e) {
     placeMark(cell, currentTurn)
     if (checkWin(currentTurn)) {
         console.log(`${currentTurn} heeft gewonnen`)
+        grid.forEach(cell => {
+            cell.removeEventListener('click', handleClick, {once: true})
+            cell.style.cursor="not-allowed"
+        })
     }
     swapTurns()
 }
@@ -56,3 +60,13 @@ function handleClick(e) {
 grid.forEach(cell => {
     cell.addEventListener('click', handleClick, {once: true})
 })
+
+// Teksten -
+// Wachten op deelnemer
+// Player 1 / 2 is aan de beurt
+// Player 1 / 2 heeft gewonnen
+// Player 1 / 2 is geleaved
+
+
+// SOCKET.IO
+const socket = io();
