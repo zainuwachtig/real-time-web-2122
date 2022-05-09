@@ -22,11 +22,20 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.render('index');
+app.get('/test', async (req, res) => {
+  let response = await fetch('https://api.emojisworld.fr/v1/random?&limit=2');
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data);
+
+    res.render('test', {
+      player1: data.results[0].emoji,
+      player2: data.results[1].emoji
+    });
+  }
 });
 
-app.get('/test', async (req, res) => {
+app.get('/', async (req, res) => {
   let response = await fetch('https://api.emojisworld.fr/v1/random?&limit=2');
   if (response.ok) {
     const data = await response.json();
@@ -41,9 +50,15 @@ app.get('/test', async (req, res) => {
 
 io.on('connection', (socket) => {
   console.log(`${socket.id} connected`);
-    socket.on('disconnect', () => {
+
+  socket.on('turn', (mark, position) => {
+    console.log(mark, position);
+    io.emit('turn', mark, position);
+  });
+    
+  socket.on('disconnect', () => {
       console.log(`${socket.id} disconnected`);
-    });
+  });
 });
 
 server.listen(port, () => {

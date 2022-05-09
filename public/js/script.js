@@ -1,4 +1,6 @@
-const grid = document.querySelectorAll('th')
+// querySelectorAll('th') om de offline versie te gebruiken
+const grid = document.querySelectorAll('button')
+const message = document.querySelector('h2')
 
 // Classes die worden toegevoegd wanneer er is geklikt
 const p1 = 'p1'
@@ -48,13 +50,19 @@ function handleClick(e) {
     const currentTurn = p1Turn ? p2 : p1
     placeMark(cell, currentTurn)
     if (checkWin(currentTurn)) {
-        console.log(`${currentTurn} heeft gewonnen`)
+        message.textContent = `${currentTurn} heeft gewonnen!`
         grid.forEach(cell => {
             cell.removeEventListener('click', handleClick, {once: true})
             cell.style.cursor="not-allowed"
         })
     }
     swapTurns()
+    if(cell.textContent) {
+        const mark = cell.textContent
+        const position = cell.id
+        socket.emit('turn', {mark, position})
+        console.log(mark, position)
+    }
 }
 
 grid.forEach(cell => {

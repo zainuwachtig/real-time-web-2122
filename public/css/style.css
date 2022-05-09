@@ -24,35 +24,36 @@ h1 {
 
 table {
     margin: 0 auto;
-    border-spacing: 1rem;
+    border-spacing: 0.5rem;
 }
 
-th {
+th, button {
     padding: 1rem;
     font-size: 3rem;
     background-color: var(--color);
     cursor: pointer;
     width: 8rem;
     height: 8rem;
+    border: none;
 }
 
-th:hover {
+th:hover, button:hover {
     opacity: 0.5;
 }
 
-tr:nth-of-type(1) th:first-of-type {
+tr:nth-of-type(1) th:first-of-type, div:first-of-type button:nth-of-type(1) {
     border-radius: 1rem 0 0 0;
 }
 
-tr:nth-of-type(1) th:last-of-type {
+tr:nth-of-type(1) th:last-of-type, div:first-of-type button:nth-of-type(3) {
     border-radius: 0 1rem 0 0;
 }
 
-tr:nth-of-type(3) th:first-of-type {
+tr:nth-of-type(3) th:first-of-type, div:last-of-type button:nth-of-type(1) {
     border-radius: 0 0 0 1rem;
 }
 
-tr:nth-of-type(3) th:last-of-type {
+tr:nth-of-type(3) th:last-of-type, div:last-of-type button:nth-of-type(3) {
     border-radius: 0 0 1rem 0;
 }
 
@@ -61,4 +62,18 @@ tr:nth-of-type(3) th:last-of-type {
     border-radius: 1rem;
     background-color: lightgray;
     width: fit-content;
+}
+
+/* TH -> Buttons */
+section {
+    width: fit-content;
+    margin: 5% auto;
+}
+
+section div {
+    display: flex;
+}
+
+button {
+    margin: 0.2rem;
 }

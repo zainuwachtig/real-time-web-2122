@@ -10,6 +10,11 @@
 2. Tic Tac Toe
 3. Dierenquiz
 
+## Gebruikte bronnen
+
+- https://www.youtube.com/watch?v=Y-GkMjUZsmM
+- https://www.youtube.com/watch?v=ZjJYqDjmGkI
+
 <!-- Here are some hints for your project! -->
 
 <!-- Start out with a title and a description -->
