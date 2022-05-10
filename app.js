@@ -9,7 +9,9 @@ const hostname = '127.0.0.1';
 const port = process.env.PORT || 5500;
 
 let players = [];
-let emojis = null
+let emojis = null;
+let currentPlayer = null;
+let turn = -1;
 
 app.use(compression());
 
@@ -48,6 +50,17 @@ io.on('connection', (socket) => {
   players.push(socket.id)
   console.log(`Huidige spelers: ${players}`)
 
+  currentPlayer = players[0];
+
+  socket.on('passTurn', () => {
+    turn += 1;
+    if (turn === players.length) {
+      turn = 0;
+      console.log('help')
+    }
+    io.emit('turn', players[turn]);
+  });
+
   socket.on('turn', (mark, position) => {
     socket.broadcast.emit('oppTurn', mark, position);
   });
@@ -60,6 +73,6 @@ io.on('connection', (socket) => {
 });
 
 server.listen(port, () => {
-    console.log("App is running on port " + port);
+  console.log("App is running on port " + port);
 });
 

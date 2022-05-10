@@ -57,11 +57,12 @@ tr:nth-of-type(3) th:last-of-type, div:last-of-type button:nth-of-type(3) {
     border-radius: 0 0 1rem 0;
 }
 
-#player-1, #player-2 {
+#player-1, #player-2, h3 {
     padding: 1rem;
     border-radius: 1rem;
     background-color: lightgray;
     width: fit-content;
+    margin: 0 auto;
 }
 
 /* TH -> Buttons */

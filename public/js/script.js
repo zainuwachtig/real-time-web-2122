@@ -1,6 +1,33 @@
+// SOCKET.IO
+const socket = io();
+
+socket.on('oppTurn', (mark, position) => {
+    document.getElementById(position).textContent = mark
+})
+
+socket.emit('passTurn')
+
+socket.on('turn', (id) => {
+    console.log('New line:')
+    console.log('Opgeslagen id: ', id)
+    console.log('Socket id nu: ', socket.id)
+
+    if (socket.id !== id) {
+        message.textContent = 'De andere speler is aan de beurt';
+        grid.forEach(button => {
+            button.disabled = true;
+        });
+    } else {
+        message.textContent = 'Jij bent aan de beurt';
+        grid.forEach(button => {
+            button.disabled = false
+        });
+    }
+})
+
 // querySelectorAll('th') om de offline versie te gebruiken
 const grid = document.querySelectorAll('button')
-const message = document.querySelector('h2')
+const message = document.querySelector('h3')
 
 // Classes die worden toegevoegd wanneer er is geklikt
 const p1 = 'p1'
@@ -54,6 +81,7 @@ function handleClick(e) {
         grid.forEach(cell => {
             cell.removeEventListener('click', handleClick, {once: true})
             cell.style.cursor="not-allowed"
+            socket.emit('passTurn')
         })
     }
     swapTurns()
@@ -69,15 +97,3 @@ grid.forEach(cell => {
     cell.addEventListener('click', handleClick, {once: true})
 })
 
-// Teksten -
-// Wachten op deelnemer
-// Player 1 / 2 is aan de beurt
-// Player 1 / 2 heeft gewonnen
-// Player 1 / 2 is geleaved
-
-
-// SOCKET.IO
-const socket = io();
-socket.on('oppTurn', (mark, position) => {
-    document.getElementById(position).textContent = mark
-})
