@@ -60,7 +60,7 @@ function handleClick(e) {
     if(cell.textContent) {
         const mark = cell.textContent
         const position = cell.id
-        socket.emit('turn', {mark, position})
+        socket.emit('turn', mark, position)
         console.log(mark, position)
     }
 }
@@ -78,3 +78,6 @@ grid.forEach(cell => {
 
 // SOCKET.IO
 const socket = io();
+socket.on('oppTurn', (mark, position) => {
+    document.getElementById(position).textContent = mark
+})

@@ -8,6 +8,9 @@ const compression = require('compression');
 const hostname = '127.0.0.1';
 const port = process.env.PORT || 5500;
 
+let players = [];
+let emojis = null
+
 app.use(compression());
 
 app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
@@ -22,42 +25,37 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/test', async (req, res) => {
-  let response = await fetch('https://api.emojisworld.fr/v1/random?&limit=2');
-  if (response.ok) {
-    const data = await response.json();
-    console.log(data);
-
-    res.render('test', {
-      player1: data.results[0].emoji,
-      player2: data.results[1].emoji
-    });
-  }
-});
-
 app.get('/', async (req, res) => {
-  let response = await fetch('https://api.emojisworld.fr/v1/random?&limit=2');
-  if (response.ok) {
-    const data = await response.json();
-    console.log(data);
-
-    res.render('index', {
-      player1: data.results[0].emoji,
-      player2: data.results[1].emoji
-    });
+  if(!emojis) {
+    let response = await fetch('https://api.emojisworld.fr/v1/random?&limit=2');
+    if(response.ok) {
+      const data = await response.json();
+      emojis = {
+        player1: data.results[0].emoji,
+        player2: data.results[1].emoji
+      }
+    }
   }
+
+  res.render('test', {
+    player1: emojis.player1,
+    player2: emojis.player2
+  });
 });
 
 io.on('connection', (socket) => {
   console.log(`${socket.id} connected`);
+  players.push(socket.id)
+  console.log(`Huidige spelers: ${players}`)
 
   socket.on('turn', (mark, position) => {
-    console.log(mark, position);
-    io.emit('turn', mark, position);
+    socket.broadcast.emit('oppTurn', mark, position);
   });
     
   socket.on('disconnect', () => {
-      console.log(`${socket.id} disconnected`);
+    console.log(`${socket.id} disconnected`);
+    players =  players.filter(p => p !== socket.id )
+    console.log(`Overgebleven spelers: ${players}`)
   });
 });
 

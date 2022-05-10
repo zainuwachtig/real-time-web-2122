@@ -77,3 +77,41 @@ section div {
 button {
     margin: 0.2rem;
 }
+
+
+/* Create or join room */
+main.room {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+main.room p {
+    margin: 1rem;
+}
+
+form input[type='text'] {
+    padding: 0.5rem;
+    text-align: center;
+    border: none;
+}
+
+form input[type='text']:focus, form input[type='submit']:focus  {
+    transform: scale(1.1);
+    margin: 0 0.5rem;
+}
+
+form input[type='submit'] {
+    background-color: var(--color);
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+form input[type='submit']:hover {
+    opacity: 0.5;
+}
