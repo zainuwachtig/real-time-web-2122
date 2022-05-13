@@ -4,7 +4,8 @@
 
 ## Beschrijving
 
-Het idee is simpel, namelijk boter, kaas en eiren maar in plaats van 'X' en 'O' icoontjes, is dit met steeds random emojis! De random emojis zijn afkomstig van een [API](https://github.com/abourtnik/emojis-world).
+Het idee is simpel, namelijk boter, kaas en eiren maar in plaats van 'X' en 'O' icoontjes, is dit met emojis! De emojis zijn afkomstig van een [API](https://github.com/abourtnik/emojis-world).
+Helaas heb ik de applicatie niet zo werkend als ik zelf zou willen, er wordt wel van beurt gewisseld, er kunnen meerdere mensen joinen maar het emoji plaatsen gaat niet helemaal lekker. De oplossing hiervoor kan de player in een object plaatsen en daarbij een emoji koppelen.
 
 ## 3 concepten
 
@@ -104,7 +105,7 @@ https://api.emojisworld.fr/v1/random?&limit=2
 
 ## Data model
 
-<!-- Dit stuk nog uitbereiden -->
+![rtw-datamodel](https://user-images.githubusercontent.com/74155415/168277182-20e917d2-0804-406b-8da5-ce8c76c218eb.png)
 
 ## Features
 

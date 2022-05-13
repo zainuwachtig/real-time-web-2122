@@ -106,3 +106,14 @@ grid.forEach(cell => {
     }
 })
 
+
+// socket.on( 'connection' , (Emoji) => {
+//   let size = Object.keys(Emoji).length;
+//   console.log( size)
+//   if (size == 1) {
+//       cell.classlist.add = "p1"
+//   } else 
+//      cell.classlist.add = "p2"
+// })
+
+
