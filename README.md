@@ -1,44 +1,130 @@
-# Real-Time Web @cmda-minor-web 2021 - 2022
+# B🧈ter, k🧀🧀s en 🥚ir🥚en!
 
-## Table of Contents
+<img width="1440" alt="Preview van Boter, Kaas en Eieren gemaakt door Zain" src="https://user-images.githubusercontent.com/74155415/167702585-7a58046c-ff6a-49eb-942b-a733f7c8dd3b.png">
 
-- [3 concepten](#concepten)
+## Beschrijving
+
+Het idee is simpel, namelijk boter, kaas en eiren maar in plaats van 'X' en 'O' icoontjes, is dit met steeds random emojis! De random emojis zijn afkomstig van een [API](https://github.com/abourtnik/emojis-world).
 
 ## 3 concepten
 
-1. Regenwormen
-2. Tic Tac Toe
-3. Dierenquiz
+### Regenwormen
+
+Regenwormen is een spelletje met zestien stenen en acht dobbelstenen, voor meer uitleg [lees hier](https://www.999games.nl/regenwormen.html). Dit was in eerste instantie mijn eerste keuze, alleen ik kwam er al snel achter dat er iets teveel spellogica achterzat. Ook kon ik geen API vinden die erop aansloot.
+
+### Boter, Kaas en Eieren
+
+Boter, Kaas en Eieren was eigelijk mijn tweede keuze, ik vond een video van [Web Dev Simplified](https://www.youtube.com/watch?v=Y-GkMjUZsmM) waar hij uitlegde hoe hij het had gemaakt. Hierbij hoefde ik mij minder op de gamelogica te focussen en meer op het socket gedeelte, dit bleek achteraf werk zat.
+
+### Dierenquiz
+
+Dierenquiz is een soort Kahoot, waarbij je een afbeelding zag van een bijzonder dier. In de applicatie zit ook een chatfunctie zodat mensen daadwerkelijk konden raden welk dier het is.
+
+### Hoe te installeren
+
+### Repo clonen
+
+```
+git clone https://github.com/zainuwachtig/real-time-web-2122.git
+```
+
+### Navigeren naar de map
+
+```
+cd real-time-web-2122
+```
+
+### NPM packages installeren
+
+```
+npm install
+```
+
+### Applicatie starten
+
+```
+npm start
+```
+
+## Gemaakt met
+
+- [Node.js](https://nodejs.org/en/)
+  - V18.0.0, voor de ingebakken fetch.
+- [Express](https://expressjs.com/)
+- [EJS](https://ejs.co/)
+- [Socket.IO](https://socket.io/)
+- [Emojis World API](https://github.com/abourtnik/emojis-world)
+- ❤️
+
+## Emojis World API
+
+In de Emojis World API kon ik al gebruik maken van een random emoji kiezer, het enige wat ik moest meegeven was een query met limit toevoegen, zodat die er maar twee ophaalt. Ik maak gebruik van de `results[0].emoji` en `results[1].emoji`.
+
+```
+https://api.emojisworld.fr/v1/random?&limit=2
+```
+
+```json
+{
+  "totals": 2,
+  "results": [
+    {
+      "id": 2042,
+      "name": "white question mark",
+      "emoji": "❔",
+      "unicode": "2754",
+      "category": {
+        "id": 7,
+        "name": "Symbols"
+      },
+      "sub_category": {
+        "id": 74,
+        "name": "other-symbol"
+      },
+      "children": []
+    },
+    {
+      "id": 992,
+      "name": "family: woman, boy, boy",
+      "emoji": "👩‍👦‍👦",
+      "unicode": "1F469 200D 1F466 200D 1F466",
+      "category": {
+        "id": 1,
+        "name": "Smileys & People"
+      },
+      "sub_category": {
+        "id": 16,
+        "name": "family"
+      },
+      "children": []
+    }
+  ]
+}
+```
+
+## Data model
+
+<!-- Dit stuk nog uitbereiden -->
+
+## Features
+
+- [x] Fetcht data van een API - Must have
+- [x] Kan door twee spelers gespeeld worden - Must have
+- [x] Spelers kunnen omstebeurt een zet doen - Must have
+- [ ] Applicatie staat live - Must have
+
+- [ ] Applicatie bepaalt wie heeft gewonnen - Should have
+
+- [ ] Spelers kunnen zowel een room maken als joinen - Could have
+
+- [ ] Scoreboard - Would have
 
 ## Gebruikte bronnen
 
 - https://www.youtube.com/watch?v=Y-GkMjUZsmM
 - https://www.youtube.com/watch?v=ZjJYqDjmGkI
+- https://github.com/dannyfrelink/real-time-app
 
-<!-- Here are some hints for your project! -->
+## License
 
-<!-- Start out with a title and a description -->
-
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- This would be a good place for your data life cycle ♻️-->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
-
-<!-- How about a license here? When in doubt use GNU GPL v3. 📜  -->
+[MIT](https://github.com/zainuwachtig/real-time-web-2122/blob/main/LICENSE)

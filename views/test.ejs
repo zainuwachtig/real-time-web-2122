@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2 id="player-1"><%= player1 %></h2>
-    <h2 id="player-2"><%= player2 %></h2>
-    <section>
+    <header>
+        <h2 id="player-1"><%= player1 %></h2>
+        <h2 id="player-2"><%= player2 %></h2>
+    </header>
+    <main>
         <div>
             <button id="cell-1"></button>
             <button id="cell-2"></button>
@@ -26,7 +28,7 @@
             <button id="cell-8"></button>
             <button id="cell-9"></button>
         </div>
-    </section>
+    </main>
     <h3></h3>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>

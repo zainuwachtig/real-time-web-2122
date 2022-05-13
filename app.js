@@ -10,8 +10,7 @@ const port = process.env.PORT || 5500;
 
 let players = [];
 let emojis = null;
-let currentPlayer = null;
-let turn = -1;
+let turnNumber = -1;
 
 app.use(compression());
 
@@ -50,15 +49,13 @@ io.on('connection', (socket) => {
   players.push(socket.id)
   console.log(`Huidige spelers: ${players}`)
 
-  currentPlayer = players[0];
-
   socket.on('passTurn', () => {
-    turn += 1;
-    if (turn === players.length) {
-      turn = 0;
-      console.log('help')
+    turnNumber += 1;
+    if (turnNumber === players.length) {
+      turnNumber = 0;
     }
-    io.emit('turn', players[turn]);
+    io.emit('changeTurn', players[turnNumber]);
+    console.log(`${players[turnNumber]} is aan de beurt`)
   });
 
   socket.on('turn', (mark, position) => {

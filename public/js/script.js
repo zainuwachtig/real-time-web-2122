@@ -5,10 +5,10 @@ socket.on('oppTurn', (mark, position) => {
     document.getElementById(position).textContent = mark
 })
 
+// passTurn begint op -1, wanneer het spel begint krijgt de eerste de beurt
 socket.emit('passTurn')
 
-socket.on('turn', (id) => {
-    console.log('New line:')
+socket.on('changeTurn', (id) => {
     console.log('Opgeslagen id: ', id)
     console.log('Socket id nu: ', socket.id)
 
@@ -33,6 +33,9 @@ const message = document.querySelector('h3')
 const p1 = 'p1'
 const p2 = 'p2'
 
+const p1Emoji = document.getElementById('player-1').innerText
+const p2Emoji = document.getElementById('player-2').innerText
+
 const combinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -51,10 +54,11 @@ let p1Turn
 // Er wordt een class toegevoegd aan het vakje waarop is gedrukt
 function placeMark(cell, currentTurn) {
     cell.classList.add(currentTurn)
+    console.log(cell, currentTurn);
     if (cell.classList.contains('p1')) {
-        cell.textContent = document.getElementById('player-1').innerText
+        cell.textContent = p1Emoji
     } else {
-        cell.textContent = document.getElementById('player-2').innerText
+        cell.textContent = p2Emoji
     }
 }
 
@@ -81,7 +85,6 @@ function handleClick(e) {
         grid.forEach(cell => {
             cell.removeEventListener('click', handleClick, {once: true})
             cell.style.cursor="not-allowed"
-            socket.emit('passTurn')
         })
     }
     swapTurns()
@@ -91,9 +94,15 @@ function handleClick(e) {
         socket.emit('turn', mark, position)
         console.log(mark, position)
     }
+    socket.emit('passTurn')
 }
 
 grid.forEach(cell => {
     cell.addEventListener('click', handleClick, {once: true})
+
+    // Dit werkt nog niet
+    if(cell.textContent.includes(p1Emoji || p2Emoji)) {
+        console.log('het werkt')
+    }
 })
 

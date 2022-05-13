@@ -62,16 +62,24 @@ tr:nth-of-type(3) th:last-of-type, div:last-of-type button:nth-of-type(3) {
     border-radius: 1rem;
     background-color: lightgray;
     width: fit-content;
+    margin: 1rem;
+}
+
+header, h3 {
     margin: 0 auto;
 }
 
-/* TH -> Buttons */
-section {
-    width: fit-content;
-    margin: 5% auto;
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
-section div {
+main {
+    width: fit-content;
+    margin: 3rem auto;
+}
+
+main div {
     display: flex;
 }
 
