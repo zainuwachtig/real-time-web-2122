@@ -105,7 +105,7 @@ https://api.emojisworld.fr/v1/random?&limit=2
 
 ## Data model
 
-![rtw-datamodel](https://user-images.githubusercontent.com/74155415/168277182-20e917d2-0804-406b-8da5-ce8c76c218eb.png)
+![rtw-datamodel](https://user-images.githubusercontent.com/74155415/168282018-ca74280b-e9e9-4642-aac2-aca1bf3303d5.png)
 
 ## Features
 
