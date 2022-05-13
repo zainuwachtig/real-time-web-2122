@@ -112,7 +112,7 @@ https://api.emojisworld.fr/v1/random?&limit=2
 - [x] Fetcht data van een API - Must have
 - [x] Kan door twee spelers gespeeld worden - Must have
 - [x] Spelers kunnen omstebeurt een zet doen - Must have
-- [ ] Applicatie staat live - Must have
+- [x] Applicatie staat live - Must have
 
 - [ ] Applicatie bepaalt wie heeft gewonnen - Should have
 
