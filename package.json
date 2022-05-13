@@ -1,6 +1,9 @@
 {
   "name": "real-time-web-2122",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "description": "## Table of Contents",
   "main": "app.js",
   "scripts": {
