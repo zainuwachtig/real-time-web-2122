@@ -1,8 +1,40 @@
-const grid = document.querySelectorAll('th')
+// SOCKET.IO
+const socket = io();
+
+socket.on('oppTurn', (mark, position) => {
+    document.getElementById(position).textContent = mark
+})
+
+// passTurn begint op -1, wanneer het spel begint krijgt de eerste de beurt
+socket.emit('passTurn')
+
+socket.on('changeTurn', (id) => {
+    console.log('Opgeslagen id: ', id)
+    console.log('Socket id nu: ', socket.id)
+
+    if (socket.id !== id) {
+        message.textContent = 'De andere speler is aan de beurt';
+        grid.forEach(button => {
+            button.disabled = true;
+        });
+    } else {
+        message.textContent = 'Jij bent aan de beurt';
+        grid.forEach(button => {
+            button.disabled = false
+        });
+    }
+})
+
+// querySelectorAll('th') om de offline versie te gebruiken
+const grid = document.querySelectorAll('button')
+const message = document.querySelector('h3')
 
 // Classes die worden toegevoegd wanneer er is geklikt
 const p1 = 'p1'
 const p2 = 'p2'
+
+const p1Emoji = document.getElementById('player-1').innerText
+const p2Emoji = document.getElementById('player-2').innerText
 
 const combinations = [
     [0, 1, 2],
@@ -22,10 +54,11 @@ let p1Turn
 // Er wordt een class toegevoegd aan het vakje waarop is gedrukt
 function placeMark(cell, currentTurn) {
     cell.classList.add(currentTurn)
+    console.log(cell, currentTurn);
     if (cell.classList.contains('p1')) {
-        cell.textContent = document.getElementById('player-1').innerText
+        cell.textContent = p1Emoji
     } else {
-        cell.textContent = document.getElementById('player-2').innerText
+        cell.textContent = p2Emoji
     }
 }
 
@@ -48,25 +81,28 @@ function handleClick(e) {
     const currentTurn = p1Turn ? p2 : p1
     placeMark(cell, currentTurn)
     if (checkWin(currentTurn)) {
-        console.log(`${currentTurn} heeft gewonnen`)
+        message.textContent = `${currentTurn} heeft gewonnen!`
         grid.forEach(cell => {
             cell.removeEventListener('click', handleClick, {once: true})
             cell.style.cursor="not-allowed"
         })
     }
     swapTurns()
+    if(cell.textContent) {
+        const mark = cell.textContent
+        const position = cell.id
+        socket.emit('turn', mark, position)
+        console.log(mark, position)
+    }
+    socket.emit('passTurn')
 }
 
 grid.forEach(cell => {
     cell.addEventListener('click', handleClick, {once: true})
+
+    // Dit werkt nog niet
+    if(cell.textContent.includes(p1Emoji || p2Emoji)) {
+        console.log('het werkt')
+    }
 })
 
-// Teksten -
-// Wachten op deelnemer
-// Player 1 / 2 is aan de beurt
-// Player 1 / 2 heeft gewonnen
-// Player 1 / 2 is geleaved
-
-
-// SOCKET.IO
-const socket = io();
